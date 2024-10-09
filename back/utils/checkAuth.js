@@ -10,13 +10,13 @@ export default (req, res, next)=>{
             next();
         } catch (err) {
             return res.status(403).json({
-                message:'Чето с токеном',
+                message: 'Something is wrong with the token',
             })
         }
         
     } else {
         return res.status(403).json({
-            message:'Нет доступа',
+            message: 'No access',
         })
     }
 

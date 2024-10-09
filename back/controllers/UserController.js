@@ -3,115 +3,115 @@ import bcrypt from "bcrypt";
 import UserModel from '../models/User.js';
 
 export const register = async (req, res) => {
-    try{
-    const password = req.body.password;
-    const salt = await bcrypt.genSalt(10);
-    const hash = await bcrypt.hash(password, salt);
+    try {
+        const password = req.body.password;
+        const salt = await bcrypt.genSalt(10);
+        const hash = await bcrypt.hash(password, salt);
 
-    const doc = new UserModel({
-        email:req.body.email,
-        passwordHash: hash,
-        photoUrl:req.body.photoUrl,
-        Gitid:req.body.Gitid,
-    });
-    const hash_env = process.env.HASH;
-    const user = await doc.save();
+        const doc = new UserModel({
+            email: req.body.email,
+            passwordHash: hash,
+            photoUrl: req.body.photoUrl,
+            Gitid: req.body.Gitid,
+        });
+        const hash_env = process.env.HASH;
+        const user = await doc.save();
 
-    const token = jwt.sign({
-        _id: user._id,
-    },
-    hash_env,
-    {
-        expiresIn: '30d',
-    });
+        const token = jwt.sign({
+            _id: user._id,
+        },
+        hash_env,
+        {
+            expiresIn: '30d',
+        });
 
-    const {passwordHash, ...userData} = user._doc;
+        const { passwordHash, ...userData } = user._doc;
 
-    res.json({
-        ...userData,
-        token,
-    });
-    } catch(err){
+        res.json({
+            ...userData,
+            token,
+        });
+    } catch (err) {
         console.log(err);
         res.status(500).json({
-            message: 'Не удалось зарегаться',
+            message: 'Failed to register',
         });
     }
 };
-export const login = async(req, res)=>{
-    try{
-        const user = await UserModel.findOne({ email: req.body.email});
 
-        if (!user){
+export const login = async (req, res) => {
+    try {
+        const user = await UserModel.findOne({ email: req.body.email });
+
+        if (!user) {
             return res.status(404).json({
-                message: 'Нет такого пользователя',
+                message: 'User not found',
             });
         }
 
         const isValidPass = await bcrypt.compare(req.body.password, user._doc.passwordHash);
 
-        if (!isValidPass){
+        if (!isValidPass) {
             return res.status(400).json({
-                message: 'Неверный логин или пароль',
+                message: 'Invalid login or password',
             });
         }
         const hash_env = process.env.HASH;
         const token = jwt.sign(
             {
-            _id: user._id,
+                _id: user._id,
             },
             hash_env,
             {
-             expiresIn: '30d',
+                expiresIn: '30d',
             }
-         );
+        );
 
-        const {passwordHash, ...userData} = user._doc;
+        const { passwordHash, ...userData } = user._doc;
 
         res.json({
             ...userData,
             token,
         });
 
-        
-    } catch(err){
+    } catch (err) {
         console.log(err);
         res.status(500).json({
-            message: 'Не удалось авторизоваться',
+            message: 'Failed to login',
         });
     }
 };
 
-export const getMe = async (req,res) => {
+export const getMe = async (req, res) => {
     try {
         const user = await UserModel.findById(req.userId);
 
-        if(!user){
+        if (!user) {
             return res.status(404).json({
-                message:'Пользователь не найден'
+                message: 'User not found'
             });
         }
 
-        const {passwordHash, ...userData} = user._doc;
+        const { passwordHash, ...userData } = user._doc;
 
         res.json(userData);
     } catch (err) {
         console.log(err);
         res.status(500).json({
-            message: 'Нет доступа',
+            message: 'Access denied',
         });
     }
 };
 
-export const gitlogin = async(req, res)=>{
-    try{
-        const user = await UserModel.findOne({ email: req.body.email});
+export const gitlogin = async (req, res) => {
+    try {
+        const user = await UserModel.findOne({ email: req.body.email });
 
-        if (!user){
+        if (!user) {
             const doc = new UserModel({
-                email:req.body.email,
-                photoUrl:req.body.photoUrl,
-                Gitid:req.body.Gitid,
+                email: req.body.email,
+                photoUrl: req.body.photoUrl,
+                Gitid: req.body.Gitid,
             });
             const hash_env = process.env.HASH;
             const user = await doc.save();
@@ -124,15 +124,13 @@ export const gitlogin = async(req, res)=>{
                 expiresIn: '30d',
             });
 
-            const {passwordHash, ...userData} = user._doc;
+            const { passwordHash, ...userData } = user._doc;
 
             res.json({
                 ...userData,
                 token,
             });
-        }
-        
-        else if(user){
+        } else if (user) {
             const hash_env = process.env.HASH;
             const token = jwt.sign({
                 _id: user._id,
@@ -142,7 +140,7 @@ export const gitlogin = async(req, res)=>{
                 expiresIn: '30d',
             });
 
-            const {passwordHash, ...userData} = user._doc;
+            const { passwordHash, ...userData } = user._doc;
 
             res.json({
                 ...userData,
@@ -150,13 +148,10 @@ export const gitlogin = async(req, res)=>{
             });
         }
 
-
-        
-    } catch(err){
+    } catch (err) {
         console.log(err);
         res.status(500).json({
-            message: 'Не удалось авторизоваться',
+            message: 'Failed to login',
         });
     }
 };
-
