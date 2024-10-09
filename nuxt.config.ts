@@ -5,6 +5,7 @@ export default defineNuxtConfig({
   devtools: {
     enabled: true
   },
+
   modules: [
     '@nuxtjs/tailwindcss',
     'shadcn-nuxt',
@@ -13,11 +14,14 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxtjs/i18n'
   ],
+
   i18n: { ...i18nConfig },
+
   shadcn: {
     prefix: 'Ui',
     componentDir: './components/ui'
   },
+
   runtimeConfig: {
     public: {
       FIREBASE_API_KEY: process.env.FIREBASE_API_KEY,
@@ -28,12 +32,16 @@ export default defineNuxtConfig({
     YANDEX_FOLDER_ID: process.env.YANDEX_FOLDER_ID,
     YANDEX_OAUTH: process.env.YANDEX_OAUTH
   },
+
   vue: {
     compilerOptions: {
       isCustomElement: (tag) => tag.startsWith('media-')
     }
   },
+
   experimental: {
     renderJsonPayloads: false
   },
+
+  compatibilityDate: '2024-10-09',
 });
