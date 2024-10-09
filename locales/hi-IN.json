@@ -1,0 +1,79 @@
+{
+  "sidebar_title": "नियंत्रण पैनल",
+  "non-active": "Notium के बारे में वीडियो",
+  "active": "Notium के बारे में वीडियो बंद करें",
+  "Notes": "नोट्स",
+  "Favorites": "पसंदीदा",
+  "AI asistant": "एआई सहायक",
+  "Settings": "सेटिंग्स",
+  "About.file.txt": "About.file.txt",
+  "telegram": "टेलीग्राम बॉट",
+  "settings_page": {
+    "contacts": {
+      "title": "संपर्क",
+      "description": "हमारे Notium की नवीनतम खबरों और विकास के लिए हमारे सोशल मीडिया और GitHub पर फॉलो करें!",
+      "redirect": "जाएँ",
+      "card": {
+        "Alex Peshkov": "अलेक्ज़ेंडर पेशकोव",
+        "Airat Bagautdinov": "ऐराट बगाउद्दीनोव"
+      }
+    },
+    "appearence": {
+      "title": "दिखावट",
+      "description": "एप्लिकेशन की दिखावट को अनुकूलित करें। विषयों के बीच स्वचालित स्विचिंग। भाषा का चयन।",
+      "theme": {
+        "title": "विषय",
+        "description": "Notium के लिए एक विषय चुनें।",
+        "light": "हल्का",
+        "dark": "गहरा",
+        "system": "सिस्टम"
+      },
+      "update": "सेटिंग्स अपडेट करें"
+    }
+  },
+  "top_menu": {
+    "btns": {
+        "rerdirect_notes": "नोट्स पर जाएं",
+        "favorite": "नोट्स पर जाएं",
+        "update": "अपडेट करें",
+        "note": "नया नोट जोड़ें",
+        "filter": "नोट्स में खोजें...",
+        "search": "खोज"
+    },
+    "priority": {
+        "title": "प्राथमिकता",
+        "filter": "प्राथमिकता खोजें",
+        "low": "कम",
+        "medium": "मध्यम",
+        "high": "उच्च",
+        "none": "कोई नहीं",
+        "all": "सभी नोट्स"
+    }
+  },
+  "account": {
+    "welcome": "Welcome पर जाएं",
+    "logout": "लॉग आउट"
+  },
+  "notes_page_null": {
+    "title": "आपके पास कोई नोट्स नहीं हैं",
+    "description": "अपनी संग्रह में नए नोट्स जोड़ें",
+    "btn": "नया नोट जोड़ें"
+  },
+  "favorite_notes_page_null": {
+    "title": "आपके पास कोई पसंदीदा नोट्स नहीं हैं",
+    "description": "अपने नोट्स खोलें और अपनी संग्रह में एक नया पसंदीदा नोट जोड़ें",
+    "btn": "नोट्स पर जाएं"
+  },
+  "ai": {
+    "placeholder": "Notium को अपने बारे में कुछ बताएं",
+    "description": "Notium AI - आपका कृत्रिम बुद्धिमत्ता सहायक। अपने विचारों को एक क्लिक में सहेजें।"
+  },
+  "toasts": {
+    "update": "आपका नोट सफलतापूर्वक अपडेट किया गया है!",
+    "delete": "आपका नोट हटा दिया गया है!",
+    "update_about": "आप About.text.txt नोट को संशोधित नहीं कर सकते",
+    "delete_about": "आप About.text.txt नोट को हटा नहीं सकते",
+    "favorite_about": "आप About.text.txt नोट को पसंदीदा में नहीं जोड़ सकते",
+    "warning": "चेतावनी!"
+  }
+}
