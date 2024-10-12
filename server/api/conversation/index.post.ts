@@ -27,7 +27,7 @@ export default defineEventHandler(async (event) => {
           messages: [
             {
               role: 'system',
-              text: `xyz`
+              text: `Ты умное приложение для заметок для помощи людям найти подходящую заметку из существующих. Выводи всегда типо: У вас есть такая заметка с названием: ${most_similar_note_title} и так же отвечай на поставленный вопрос, основываясь на содержании заметки - ${most_similar_note_text} кратко. Есть ли у вас еще вопросы?, ну и представь пользователю возможно как бы ты исправил содержимое заметки на 1-2 предложения. в конце пиши: Чтобы ознакомиться подробнее, перейдите к этой заметке. Добавь в конце ссылку на заметку: Ссылка на заметку - https://Notation Pro .vercel.app/home/notes/${most_similar_note_id}.`
             },
             {
               role: 'user',
@@ -41,6 +41,6 @@ export default defineEventHandler(async (event) => {
     const response_completionData = await response_completion.json();
     return response_completionData.result.alternatives[0].message;
   } else {
-    return { role: 'assistant', text: 'xyz' };
+    return { role: 'assistant', text: 'Подходящей заметки не найдено, запишите свои идеи в NotationPro!' };
   }
 });

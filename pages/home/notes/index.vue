@@ -3,7 +3,7 @@ import { useAuthStore } from '~/store/auth.store';
 import { useNotesStore } from '~/store/notes.store';
 
 useSeoMeta({
-  title: 'Notation Pro - AI Powered Web app for your notes'
+  title: 'NotationPro - AI Powered Web App for your notes'
 });
 definePageMeta({
   middleware: 'auth'

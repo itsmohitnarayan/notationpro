@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useSeoMeta({
-  title: 'Notation Pro - AI Powered Web app for your notes'
+  title: 'NotationPro - AI Powered Web App for your notes'
 });
 definePageMeta({
   middleware: 'auth'

@@ -18,7 +18,7 @@ const mode = useColorMode();
       Please go to the official GitHub repository for more information or contact with us by telegram
     </p>
     <div class="flex items-center gap-4">
-      <UiButton @click="redirect('https://github.com/itsmohitnarayan/notationpro')" variant="outline">
+      <UiButton @click="redirect('https://github.com/itsmohitnarayan/notationpro Pro ')" variant="outline">
         <img v-if="mode === 'light'" src="/icons/github.png" class="mr-2 h-4 w-4" />
         <GithubIcon v-else class="mr-2 h-4 w-4" />
         GitHub

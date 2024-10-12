@@ -76,7 +76,7 @@ const editor = useEditor({
   autofocus: route.path === localePath(ABOUT_ROUTE) ? 75 : 'end',
   editorProps: {
     attributes: {
-      class: 'editor-notationpro',
+      class: 'editor-NotationPro',
       spellcheck: 'false'
     }
   }

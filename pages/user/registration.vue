@@ -5,7 +5,7 @@ definePageMeta({
 });
 
 useSeoMeta({
-  title: 'Registration | Notium'
+  title: 'Registration | NotationPro'
 });
 </script>
 
@@ -26,3 +26,4 @@ useSeoMeta({
     </div>
   </div>
 </template>
+//one sec i will call to my bro to find where is api uri. ok bro 

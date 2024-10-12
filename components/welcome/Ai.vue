@@ -22,7 +22,7 @@ const cards = reactive<Card[]>([
     <h2
       class="mb-2 text-center text-xl font-bold leading-tight tracking-tighter md:text-4xl lg:leading-[1.1] dark:text-zinc-100"
     >
-      Notation Pro Ai
+      NotationPro Ai
     </h2>
     <span class="max-w-[500px] pb-12 text-center text-lg text-[#72717a] sm:text-lg dark:text-zinc-300">
       The built-in AI assistant will help you with finding your thoughts and auto-completion of the text

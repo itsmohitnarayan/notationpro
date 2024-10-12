@@ -47,7 +47,9 @@ const { store } = useColorMode();
     </UiPopoverTrigger>
     <UiPopoverContent class="w-[188px] p-0" align="end">
       <UiCommand
-        :filter-function="(list, term) => (list as Priority[]).filter((i) => i.label.toLowerCase().includes(term.toLowerCase()))"
+        :filter-function="
+          (list: Priority[], term) => list.filter((i) => i.label.toLowerCase().includes(term.toLowerCase()))
+        "
       >
         <UiCommandInput :placeholder="$t(`top_menu.priority.filter`)" />
         <UiCommandList>

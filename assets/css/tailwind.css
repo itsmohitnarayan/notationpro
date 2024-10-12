@@ -18,73 +18,73 @@
   }
 }
 
-.editor-notationpro {
+.editor-NotationPro {
   @apply flex flex-col space-y-4;
 }
 
-.editor-notationpro h1 {
+.editor-NotationPro h1 {
   @apply text-[40px] font-extrabold dark:text-zinc-200;
 }
 
-.editor-notationpro h2 {
+.editor-NotationPro h2 {
   @apply text-3xl font-extrabold dark:text-zinc-200;
 }
 
-.editor-notationpro h3 {
+.editor-NotationPro h3 {
   @apply text-2xl font-extrabold dark:text-zinc-200;
 }
 
-.editor-notationpro p {
+.editor-NotationPro p {
   @apply text-lg dark:text-zinc-200;
 }
 
-.editor-notationpro span {
+.editor-NotationPro span {
   @apply text-base dark:text-zinc-200;
 }
 
-.editor-notationpro ol,
-.editor-notationpro ul {
+.editor-NotationPro ol,
+.editor-NotationPro ul {
   @apply !mt-2 ml-8 list-outside dark:text-zinc-200;
 }
 
-.editor-notationpro ol {
+.editor-NotationPro ol {
   @apply list-decimal dark:text-zinc-200;
 }
-.editor-notationpro ul {
+.editor-NotationPro ul {
   @apply list-disc dark:text-zinc-200;
 }
 
-.editor-notationpro ol li,
-.editor-notationpro ul li {
+.editor-NotationPro ol li,
+.editor-NotationPro ul li {
   @apply mt-2 first:mt-0 dark:text-zinc-200;
 }
 
-.editor-notationpro blockquote {
+.editor-NotationPro blockquote {
   @apply !mb-2 !mt-6 ml-6 border-l-4 border-gray-300 p-4 py-2 italic dark:text-zinc-200;
 }
 
-.editor-notationpro a {
+.editor-NotationPro a {
   @apply cursor-pointer text-blue-800 hover:underline dark:text-zinc-200;
 }
 
-.editor-notationpro hr {
+.editor-NotationPro hr {
   @apply border-gray-400;
 }
 
-.editor-notationpro table {
+.editor-NotationPro table {
   @apply w-full table-fixed border-collapse border border-gray-400;
 }
 
-.editor-notationpro table th,
-.editor-notationpro table td {
+.editor-NotationPro table th,
+.editor-NotationPro table td {
   @apply relative border border-gray-400 px-2 py-1;
 }
 
-.editor-notationpro table th {
+.editor-NotationPro table th {
   @apply bg-blue-100;
 }
 
-.editor-notationpro .tableWrapper {
+.editor-NotationPro .tableWrapper {
   @apply overflow-x-hidden;
 }
 
@@ -157,7 +157,7 @@ body{
 .tippy-content .is-active {
   @apply bg-zinc-200;
 }
-.editor-notationpro .color {
+.editor-NotationPro .color {
   white-space: nowrap;
 
   &::before {

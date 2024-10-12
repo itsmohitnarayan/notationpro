@@ -8,8 +8,8 @@ export const SETTINGS_ROUTE = '/settings';
 export const FAVORITES_ROUTE = '/home/favorites';
 
 export const ErrorAuth = {
-  LOGIN_ERROR: 'Login error, please try again! Notation Pro cannot give you access to use :/',
-  REGISTRATION_ERROR: 'Registration error, please try again! Notation Pro cannot give you access to use :/'
+  LOGIN_ERROR: 'Login error, please try again! Notation Pro  cannot give you access to use :/',
+  REGISTRATION_ERROR: 'Registration error, please try again! Notation Pro  cannot give you access to use :/'
 } as const;
 
 export const NoteToasts = {

@@ -1,8 +1,8 @@
 <script setup lang="ts">
 useSeoMeta({
-  title: 'Notation Pro - AI Powered Web app for your notes',
+  title: 'NotationPro - AI Powered Web App for your notes',
   description:
-    'Notation Pro is a AI Powered Web app allowing users to create and store notes based on their priorities, also using the built-in AI, assistant NotiumAI'
+    'NotationPro is a AI Powered Web app allowing users to create and store notes based on their priorities, also using the built-in AI, assistant NotationProAI'
 });
 
 definePageMeta({

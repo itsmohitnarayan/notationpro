@@ -5,7 +5,7 @@ definePageMeta({
 });
 
 useSeoMeta({
-  title: 'Login | Notation Pro'
+  title: 'Login | NotationPro'
 });
 </script>
 

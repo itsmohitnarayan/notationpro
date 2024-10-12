@@ -65,7 +65,7 @@ watch(
         </div>
         <div v-if="props.isPending" class="flex items-center gap-2 pb-10">
           <AiAvatar>
-            <UiAvatarFallback>Notation Pro ai </UiAvatarFallback>
+            <UiAvatarFallback> ai </UiAvatarFallback>
           </AiAvatar>
           <div class="flex items-center gap-2 text-[14px] dark:text-zinc-200 md:text-[13px] 2xl:text-[14px]">
             <span>is thinking</span>

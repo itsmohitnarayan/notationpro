@@ -32,6 +32,7 @@ onMounted(async () => {
         <MenuItem :menu-items="props.navItems" />
       </div>
       <div class="space-y-1 mt-5">
+        <ProvidersVideoPlayer />
       </div>
     </div>
     <LayoutSkeletonSidebar v-else />

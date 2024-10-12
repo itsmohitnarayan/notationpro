@@ -21,7 +21,7 @@ const localPath = useLocalePath();
     <div class="container flex h-14 max-w-screen-2xl items-center justify-between">
       <div @click="navigateTo(HOME_ROUTE)" class="flex items-center space-x-3 cursor-pointer">
         <img :src="mode === 'light' ? '/img/logo.svg' : '/img/logo_white.svg'" class="h-7 w-7 text-zinc-100" />
-        <span class="text-[22px] font-bold dark:text-zinc-100">Notation Pro</span>
+        <span class="text-[22px] font-bold dark:text-zinc-100">NotationPro</span>
       </div>
       <div class="flex items-center space-x-10">
         <span v-for="link in links" :key="link.id" @click="scrollToSection(link.section)"
@@ -33,7 +33,7 @@ const localPath = useLocalePath();
         <UiButton @click="navigateTo(localPath(LOGIN_ROUTE))" variant="ghost">Log in</UiButton>
         <UiButton @click="navigateTo(localPath(REGISTRATION_ROUTE))">Get started</UiButton>
       </div>
-      <UiButton v-else @click="navigateTo(localPath(ABOUT_ROUTE))">Go to Notation Pro</UiButton>
+      <UiButton v-else @click="navigateTo(localPath(ABOUT_ROUTE))">Go to NotationPro</UiButton>
     </div>
   </header>
 </template>

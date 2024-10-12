@@ -53,11 +53,11 @@ onMounted(async () => {
       <UiDropdownMenuGroup>
         <UiDropdownMenuItem @click="navigateTo(localePath(HOME_ROUTE))">
           <span>{{ $t('account.welcome') }}</span>
-          <UiDropdownMenuShortcut>B</UiDropdownMenuShortcut>
+          <UiDropdownMenuShortcut><CTRL>B</CTRL></UiDropdownMenuShortcut>
         </UiDropdownMenuItem>
         <UiDropdownMenuItem @click="onLogout">
           <span>{{ $t('account.logout') }}</span>
-          <UiDropdownMenuShortcut>q</UiDropdownMenuShortcut>
+            <UiDropdownMenuShortcut><CTRL>Q</CTRL></UiDropdownMenuShortcut>
         </UiDropdownMenuItem>
       </UiDropdownMenuGroup>
     </UiDropdownMenuContent>
