@@ -1,33 +1,18 @@
-interface YandexConfig {
-  YANDEX_OAUTH: string;
-  YANDEX_FOLDER_ID: string;
+// Make sure to include these imports:
+
+import { GoogleGenerativeAI } from "@google/generative-ai";
+
+const apiKey = process.env.GEMINI_API_KEY;
+if (!apiKey) {
+    throw new Error("GEMINI_API_KEY is not defined");
 }
 
-export async function getIamToken(config: YandexConfig): Promise<string> {
-  const iamTokenResponse = await fetch('https://iam.api.cloud.yandex.net/iam/v1/tokens', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      yandexPassportOauthToken: config.YANDEX_OAUTH
-    })
-  });
+const genAI = new GoogleGenerativeAI(apiKey);
+const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro" });
 
-  const { iamToken } = await iamTokenResponse.json();
-  return iamToken;
-}
+const prompt = "Write a story about a magic backpack.";
 
-export async function getRefreshToken(config: YandexConfig) {
-  let iamToken = await getIamToken(config);
-
-  const ONE_HOUR = 3600 * 1000;
-  const refreshIamToken = async () => {
-    iamToken = await getIamToken(config);
-  };
-
-  const tokenRefreshInterval = setInterval(refreshIamToken, ONE_HOUR);
-  clearInterval(tokenRefreshInterval);
-
-  return iamToken;
-}
+(async () => {
+    const result = await model.generateContent(prompt);
+    console.log(result.response.text());
+})();
